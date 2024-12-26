@@ -1,4 +1,4 @@
-package com.faang.practice;
+package com.dsa.gfg.intro;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

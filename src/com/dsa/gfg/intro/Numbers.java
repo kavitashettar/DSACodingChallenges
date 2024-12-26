@@ -1,4 +1,4 @@
-package com.faang.practice;
+package com.dsa.gfg.intro;
 
 public class Numbers {
 

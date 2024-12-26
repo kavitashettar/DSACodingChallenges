@@ -8,8 +8,45 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class ArraysGFG {
+public class ArraySolutions {
+	
+	
+		// Two Sum - Unsorted and sorted
+		//Only one valid answer exists.
+	   public int[] twoSum(int[] nums, int target) {
+	        int res[] = new int[2];
+	        HashMap<Integer,Integer> hs = new HashMap<Integer,Integer>();
 
+	        for(int i=0;i<nums.length ;i++){
+	            int diff = target - nums[i];
+	            if(hs.containsKey(diff)){
+	                res[0] = hs.get(diff);
+	                res[1] = i;
+	            }
+	            hs.put(nums[i],i);
+	        }
+	        return res;
+	    }
+
+	   // For Sorted Array using Two Pointer
+	   // 
+	   public int[] twoSumEfficient(int[] numbers, int target) {
+	        int[] res = new int[2];
+	        int n = numbers.length;
+	        int low = 0;
+	        int high = n-1;
+
+	        while(numbers[low] + numbers[high] != target){
+	            if(numbers[low] + numbers[high] < target)
+	                low++;
+	            else 
+	                high--; 
+	        }
+	        res[0] =low+1;
+	        res[1] = high+1;
+	        return res;
+
+	    }
 	static int maxIndexDiff(int a[], int n) {
 		int maxIndexDiff = -1;
 		int Lmin[] = new int[n];

@@ -1,4 +1,4 @@
-package com.faang.practice;
+package com.dsa.gfg.intro;
 
 import java.util.ArrayList;
 import java.util.List;
